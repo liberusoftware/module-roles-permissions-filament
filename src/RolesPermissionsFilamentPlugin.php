@@ -1,10 +1,10 @@
 <?php
 
-namespace Liberu\Foundation\AuthorizationFilament;
+namespace Liberu\Foundation\RolesPermissionsFilament;
 
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 
-final class AuthorizationFilamentPlugin extends FilamentShieldPlugin
+final class RolesPermissionsFilamentPlugin extends FilamentShieldPlugin
 {
     public static function make(): static
     {
