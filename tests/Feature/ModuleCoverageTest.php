@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-uses(Tests\TestCase::class, Illuminate\Foundation\Testing\RefreshDatabase::class);
+uses(TestCase::class, RefreshDatabase::class);
 
 use Filament\Actions\CreateAction;
-use Filament\Panel;
 use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Validation\ValidationException;
 use Liberu\Foundation\RolesPermissions\Contracts\PrivilegedActor;
 use Liberu\Foundation\RolesPermissions\Enums\Role as RoleEnum;
@@ -22,6 +22,7 @@ use Liberu\Foundation\RolesPermissionsFilament\RolesPermissionsFilamentPlugin;
 use Liberu\Foundation\RolesPermissionsFilament\RolesPermissionsFilamentServiceProvider;
 use Spatie\Permission\Models\Role as SpatieRole;
 use Symfony\Component\HttpKernel\Exception\HttpException;
+use Tests\TestCase;
 
 function makePrivilegedTestActor(bool $superAdmin): Authenticatable
 {
